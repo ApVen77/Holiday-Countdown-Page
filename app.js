@@ -1,3 +1,116 @@
+// The data/time we want to countdown to
+var countDownDate = new Date("Dec 25, 2020 16:37:52").getTime();
+    
+// Run myfunc every second
+var myfunc = setInterval(function() {
+
+var now = new Date().getTime();
+var timeleft = countDownDate - now;
+    
+// Calculating the days, hours, minutes and seconds left
+var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+    
+// Result is output to the specific element
+document.getElementById("days").innerHTML = days + "days "
+document.getElementById("hours").innerHTML = hours + "hours " 
+document.getElementById("mins").innerHTML = minutes + "mins " 
+document.getElementById("secs").innerHTML = seconds + "seconds " 
+    
+
+// Display the message when countdown is over
+if (timeleft < 0) {
+    clearInterval(myfunc);
+    document.getElementById("days").innerHTML = ""
+    document.getElementById("hours").innerHTML = "" 
+    document.getElementById("mins").innerHTML = ""
+    document.getElementById("secs").innerHTML = ""
+    document.getElementById("end").innerHTML = "Merry Christmas!!";
+}
+}, 1000);
+// // Create a var to store your fortunes
+// // Store the fortunes in an array
+// // seperate each item with a comma 
+// // function picFunc() {
+// // var donuts= [
+// //   "https://www.sweetrecipeas.com/wp-content/uploads/2020/03/Chocolate-Sprinkle-Yeast-Donuts-03-720x540.jpeg",
+// //   "https://www.sweetrecipeas.com/wp-content/uploads/2020/03/Chocolate-Sprinkle-Yeast-Donuts-03-720x540.jpeg",
+// //   "https://www.sweetrecipeas.com/wp-content/uploads/2020/03/Chocolate-Sprinkle-Yeast-Donuts-03-720x540.jpeg",
+// //   "https://www.sweetrecipeas.com/wp-content/uploads/2020/03/Chocolate-Sprinkle-Yeast-Donuts-03-720x540.jpeg",
+// //   "https://www.sweetrecipeas.com/wp-content/uploads/2020/03/Chocolate-Sprinkle-Yeast-Donuts-03-720x540.jpeg"
+// // ];
+
+
+// //   var index= document.getElementById("nut").selectindex;
+// //   document.images[2].src= "https://www.sweetrecipeas.com/wp-content/uploads/2020/03/Chocolate-Sprinkle-Yeast-Donuts-03-720x540.jpeg donuts[index]" + donuts[index] + ".jpg"; 
+// // }
+
+
+// var fortunes = [ 
+//   "You wil marry",
+//   "You will fall",
+//   "You will have a baby",
+//   "Obtendras un nuevo trabajo", 
+//   "You will be rich in 5 years",
+//   "You will gt your dream job",
+//   "You will move back to your hometown",
+//   "You will get a new car after a bad accident",
+//   "You will master JS before you know it",
+//   "You will take a trip",
+//   "Be careful you are about to get in BIG trouble"
+// ]; 
+
+
+
+// // Create a function that will generate the fortunes 
+
+// function tellFortune() {
+  
+//   // generate a random number 
+//   var randomNumber = Math.floor(Math.random() * fortunes.length);
+
+  
+
+//   // take the fortune at the random spot and insert it into the "btn" div
+//  document.getElementById("btn").innerHTML = fortunes[randomNumber];
+// }; 
+
+
+
+var donuts= ["milk", "sweet", "lime", "lemon"];
+console.log(donuts.length);
+
+var donuts2= new Array();
+donuts2[0]= "chocolate";
+donuts2[1]= "spinkle";
+donuts2[2]= "vanilla";
+donuts2[3]= "glazed";
+
+donuts2.push("oldfashioned", "lemon")
+donuts2.pop(); 
+donuts2.shift(); 
+
+donuts2.unshift("lime", "extra spinkle");
+donuts2.indexOf("vanilla");
+var trash= donuts2.splice(1);
+console.log(trash);
+// document.getElementById("nut").innerHTML= donuts.toString();
+
+for (i=0; i<donuts2.length; i++)
+{
+  console.log(donuts2[i]);
+  
+}
+
+function myFunc() {
+  
+  document.getElementById("btn").innerHTML = donuts2.toString();
+};
+
+
+
 // function showMessage(firstName, lastName) {
 //   // Code goes Here
 //   var say= "Hello";
@@ -7,16 +120,6 @@
 // showMessage("April", "Long"); 
 // showMessage("Marvin", "Lara");
 // showMessage("Sheily", "Perez");
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -46,22 +149,18 @@
 
 // alert the result 
 
+
+
  
+// function tellFortune(numChild, jobTitle, partner, location) {
+//   var future= "You will be a" + jobTitle + " " 
+//   +  " in "  + location + " " + " and married to " + partner + " " + "with" + numChild + "kids"; 
+//   console.log(future); 
+// }; 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// tellFortune(3, "teacher", "hot produce worker", "London"); 
+// tellFortune(0, "actor", "doctor", "Italy"); 
+// tellFortune(9, "student", "animal-lover", "Denver"); 
 
 
 // function tellFortune(jobTitle, geoLocation, partner, numKids) {
@@ -129,7 +228,7 @@ var currentTime= new Date();
 
 //this will get the time 
 
-//what element do you want to get?
+
 var time = document.getElementById("time");
 time.innerHTML= currentTime.toLocaleTimeString();
 // what do you want to do with it? 

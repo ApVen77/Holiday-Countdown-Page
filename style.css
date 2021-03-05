@@ -1,13 +1,13 @@
 body {
-    background-image: url(images/20201012_132302.jpg);
+    background-image: url("https://media.giphy.com/media/12wteMTXxjLaVO/giphy.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: red;
+    /* background-color: red; */
 }
 
 #time, #date, #week-day, h2  {
-    color: #eeee; 
+    color: red; 
     text-align: left;
     margin: 0, 10px; 
     font-size: 35px;
@@ -18,7 +18,7 @@ h1 {
     color: green;
     text-align: center;
     font-size: 50px;
-    margin-top: 150px;
+    margin-top: 40px;
 }
 
 .timer {
@@ -30,7 +30,26 @@ h1 {
 
 p
  {
-     font-size: 50px;
+     font-size: 60px;
      display: inline;
      text-align: center;
+    
+ 
+    }
+
+    
+    .road {
+        text-align: center;
+        
+    
+ }
+
+ 
+
+ img {
+     width: 400px;
+     height: 450px;
+     margin-left: 450px;
+     border-radius: 30%;
+     border: solid green 20px;
  }
