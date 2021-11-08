@@ -1,36 +1,7 @@
 body {
-    background-image: url(images/20201012_132302.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: red;
+    background-color: aqua;
 }
 
-#time, #date, #week-day, h2  {
-    color: #eeee; 
-    text-align: left;
-    margin: 0, 10px; 
-    font-size: 35px;
-
+#ctime, #cdate, #dayOfWeek {
+    color: white; 
 }
-
-h1 {
-    color: green;
-    text-align: center;
-    font-size: 50px;
-    margin-top: 150px;
-}
-
-.timer {
-    display: inline;
-    font-size: 40px;
-    color: #eeee;
-    
-}
-
-p
- {
-     font-size: 50px;
-     display: inline;
-     text-align: center;
- }
